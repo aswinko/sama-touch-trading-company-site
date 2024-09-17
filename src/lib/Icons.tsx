@@ -846,24 +846,24 @@ const StackItems = [
   },
 ];
 
-const SocialItems = [
-  {
-    name: "Google",
-    logo: <Google />,
-  },
-  {
-    name: "LinkedIn",
-    logo: <LinkedIn />,
-  },
-  {
-    name: "WhatsApp",
-    logo: <WhatsApp />,
-  },
-  {
-    name: "Github",
-    logo: <Github />,
-  },
-];
+// const SocialItems = [
+//   {
+//     name: "Google",
+//     logo: <Google />,
+//   },
+//   {
+//     name: "LinkedIn",
+//     logo: <LinkedIn />,
+//   },
+//   {
+//     name: "WhatsApp",
+//     logo: <WhatsApp />,
+//   },
+//   {
+//     name: "Github",
+//     logo: <Github />,
+//   },
+// ];
 
 export const LanguageItems = [
   {

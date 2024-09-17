@@ -1,8 +1,14 @@
 "use client";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 
-function ProductCards({ imgSrc, cardTitle, cardDesc }: any) {
+interface ProductCardsProps {
+  imgSrc: string;
+  cardTitle: string;
+  cardDesc: string;
+}
+
+
+function ProductCards({ imgSrc, cardTitle, cardDesc }: ProductCardsProps) {
   return (
     <div className="max-w-xs w-full group/card">
       <div
