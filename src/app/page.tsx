@@ -1,17 +1,18 @@
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import ProductCards from "@/components/common/ProductCards";
 import MovingCards from "@/components/common/MovingCards";
 import Footer from "@/components/common/Footer";
 import ServiceCard from "@/components/common/ServiceCard";
+import { signIn } from "@/auth";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="">
       <div className="flex flex-col md:flex-row md:mt-8 py-4">
         <div className="w-full h-full flex justify-center">
-          <img src="/banner.png" className="w-5/6" alt="img" />
+          <Image src="/banner.png" className="w-5/6" alt="img" />
         </div>
         <div className="flex flex-col justify-center text-center md:text-start items-center md:items-start gap-12">
           <div>
@@ -31,9 +32,15 @@ export default function Home() {
             </p>
           </div>
           <div className="flex items-end">
-            <Button>
-              <Link href={"/sign-up"}>Join Now</Link>
-            </Button>
+            {/* Google auth signin */}
+            <form
+              action={async () => {
+                "use server";
+                await signIn("google");
+              }}
+            >
+              <Button type="submit">Join Now</Button>
+            </form>
           </div>
         </div>
       </div>

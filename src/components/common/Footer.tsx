@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { SVGProps } from "react";
 
 const Footer = () => {
   return (
@@ -27,7 +27,7 @@ const Footer = () => {
 
 export default Footer;
 
-function GithubIcon(props:any) {
+function GithubIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -48,7 +48,7 @@ function GithubIcon(props:any) {
 }
 
 
-function TwitterIcon(props:any) {
+function TwitterIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -68,7 +68,7 @@ function TwitterIcon(props:any) {
 }
 
 
-function YoutubeIcon(props:any) {
+function YoutubeIcon(props:SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
