@@ -1,22 +1,16 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import ProductCards from "@/components/common/ProductCards";
 import MovingCards from "@/components/common/MovingCards";
 import Footer from "@/components/common/Footer";
+import ServiceCard from "@/components/common/ServiceCard";
 
 export default function Home() {
   return (
     <div className="">
-      <div className="flex flex-col md:flex-row md:mt-8">
-        <div className="w-full h-full">
+      <div className="flex flex-col md:flex-row md:mt-8 py-4">
+        <div className="w-full h-full flex justify-center">
           <img src="/banner.png" className="w-5/6" alt="img" />
         </div>
         <div className="flex flex-col justify-center text-center md:text-start items-center md:items-start gap-12">
@@ -38,12 +32,12 @@ export default function Home() {
           </div>
           <div className="flex items-end">
             <Button>
-              <Link href={"/signup"}>Join Now</Link>
+              <Link href={"/sign-up"}>Join Now</Link>
             </Button>
           </div>
         </div>
       </div>
-      <div className="w-full bg-gray-900 flex flex-row justify-evenly p-4">
+      <div className="w-full bg-gray-100 dark:bg-gray-900 flex flex-col gap-4 md:gap-0 md:flex-row justify-evenly p-4">
         <Card className="flex items-center rounded-none py-6">
           <CardContent className="text-center">
             <p className="text-xl font-medium">Free Shipping</p>
@@ -73,7 +67,7 @@ export default function Home() {
         <h2 className="font-bold text-3xl text-center py-12">
           Best Selling Products
         </h2>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           <ProductCards
             cardTitle={"Card 1"}
             cardDesc={
@@ -111,7 +105,13 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="dark:bg-black">
+
+      <div className="">
+        <h2 className="font-bold text-3xl text-center py-12">Our Services</h2>
+        <ServiceCard />
+      </div>
+
+      <div className="">
         <h2 className="font-bold text-3xl text-center py-12">
           Customers Reviews
         </h2>
