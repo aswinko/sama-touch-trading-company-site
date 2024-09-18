@@ -38,7 +38,7 @@ const Page = () => {
   return (
     <div className="container mx-auto px-4 py-6 md:pb-16">
     {/* Section Title */}
-    <h1 className="text-4xl font-bold text-center mb-8">About Us</h1>
+    <h1 className="text-4xl font-bold text-center mb-8  text-gray-700 dark:text-white">About Us</h1>
 
     {/* Company Mission Section with Logo */}
     <section className="flex flex-col md:flex-row items-center max-w-3xl mx-auto mb-12">

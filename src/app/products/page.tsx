@@ -1,11 +1,37 @@
-"use client"
-
-import React, { useState } from "react";
+import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "@/components/ui/select";
 
-const allProducts = [
+// Define the type for a single product
+type Product = {
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  link: string;
+};
+
+// Define the type for the grouped products by category
+type GroupedProducts = {
+  [category: string]: Product[];
+};
+
+// Array of all products
+const allProducts: Product[] = [
+  {
+    title: "Organic Saffron",
+    description: "High-quality organic saffron sourced from Iran.",
+    image: "/images/saffron.jpg",
+    category: "Food Items",
+    link: "#",
+  },
+  {
+    title: "Organic Saffron",
+    description: "High-quality organic saffron sourced from Iran.",
+    image: "/images/saffron.jpg",
+    category: "Spices",
+    link: "#",
+  },
   {
     title: "Organic Saffron",
     description: "High-quality organic saffron sourced from Iran.",
@@ -28,17 +54,10 @@ const allProducts = [
     link: "#",
   },
   {
-    title: "Pure Butter",
-    description: "Rich and creamy butter made from fresh dairy.",
-    image: "/images/butter.jpg",
-    category: "Dairy",
-    link: "#",
-  },
-  {
     title: "Chickpeas",
     description: "Nutrient-rich chickpeas, perfect for any recipe.",
     image: "/images/chickpeas.jpg",
-    category: "Pulses",
+    category: "Food Items",
     link: "#",
   },
   {
@@ -48,66 +67,71 @@ const allProducts = [
     category: "Dairy",
     link: "#",
   },
-  // Add more products with different categories
+  {
+    title: "Pure Butter",
+    description: "Rich and creamy butter made from fresh dairy.",
+    image: "/images/butter.jpg",
+    category: "Dairy",
+    link: "#",
+  },
+  {
+    title: "Pure Butter",
+    description: "Rich and creamy butter made from fresh dairy.",
+    image: "/images/butter.jpg",
+    category: "Dairy",
+    link: "#",
+  },
+  // Add more products as needed
 ];
 
-const categories = ["All", "Spices", "Dairy", "Pulses"];
+// Helper function to group products by category
+const groupProductsByCategory = (products: Product[]) => {
+  return products.reduce<GroupedProducts>((acc, product) => {
+    const { category } = product;
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(product);
+    return acc;
+  }, {});
+};
 
 const Products = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const filteredProducts = selectedCategory === "All" 
-    ? allProducts 
-    : allProducts.filter(product => product.category === selectedCategory);
+  // Group products by category
+  const productsByCategory = groupProductsByCategory(allProducts);
 
   return (
     <div className="container mx-auto px-4 py-10">
       {/* Section Title */}
-      <h1 className="text-4xl font-bold text-center mb-12">Our Products</h1>
+      <h1 className="text-4xl font-bold text-center mb-12  text-gray-700 dark:text-white">Our Products</h1>
 
-      {/* Category Filter */}
-      <div className="mb-8 flex justify-center w-fit">
-        <Select
-          value={selectedCategory}
-          onValueChange={setSelectedCategory}
-          defaultValue="All"
-        >
-          <SelectTrigger>
-            <SelectValue placeholder="Filter by Category" />
-          </SelectTrigger>
-          <SelectContent>
-            {categories.map(category => (
-              <SelectItem key={category} value={category}>
-                {category}
-              </SelectItem>
+      {/* Iterate over each category */}
+      {Object.keys(productsByCategory).map((category, index) => (
+        <div key={index} className="mb-12">
+          {/* Category Title */}
+          <h2 className="text-2xl font-semibold mb-6">{category}</h2>
+
+          {/* Products under this category */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {productsByCategory[category].map((product, idx) => (
+              <Card key={idx} className="flex flex-col items-center p-4">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <CardHeader>
+                  <CardTitle>{product.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm mb-4">{product.description}</p>
+                  <Button className="w-full text-center">Learn More</Button>
+                </CardContent>
+              </Card>
             ))}
-          </SelectContent>
-        </Select>
-      </div>
-
-      {/* Products List */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {filteredProducts.map((product, idx) => (
-          <Card key={idx} className="flex flex-col items-center p-4">
-            <img
-              src={product.image}
-              alt={product.title}
-              className="w-full h-48 object-cover rounded-lg mb-4"
-            />
-            <CardHeader>
-              <CardTitle>{product.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm mb-4">{product.description}</p>
-              <Button
-                className="w-full text-center"
-              >
-                Learn More
-              </Button>
-            </CardContent>
-          </Card>
-        ))}
-      </section>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

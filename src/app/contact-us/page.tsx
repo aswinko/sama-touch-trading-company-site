@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div className="container mx-auto px-4 py-10">
       {/* Section Title */}
-      <h1 className="text-4xl font-bold text-center mb-12">Contact Us</h1>
+      <h1 className="text-4xl font-bold text-center mb-12 text-gray-700 dark:text-white">Contact Us</h1>
 
       <div className="flex flex-col lg:flex-row lg:space-x-10 mb-16">
         {/* Contact Information Section */}

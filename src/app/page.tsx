@@ -10,14 +10,14 @@ import ProductsCategory from "@/components/common/ProductsCategory";
 export default function Home() {
   return (
     <div className="container mx-auto">
-      <div className="flex flex-col md:flex-row md:mt-8 py-4 ">
+      <div className="flex flex-col md:flex-row md:mt-8 py-4 md:py-12">
         <div className="w-full h-full flex justify-center">
-          <img src="/banner.png" className="w-5/6" alt="img" />
+          <img src="/home-page.png" className="w-full h-full object-cover" alt="img" />
         </div>
         <div className="flex flex-col justify-center text-center md:text-start items-center md:items-start gap-12">
           <div>
-            <p className="text-3xl md:text-6xl font-bold">
-              Connecting Global Food to Local Markets
+            <p className="text-3xl md:text-6xl font-bold text-gray-700 dark:text-white">
+              Connecting Global Food to Local Markets in Kuwait
             </p>
           </div>
           <div>
@@ -28,15 +28,6 @@ export default function Home() {
             </p>
           </div>
           <div className="flex items-end">
-            {/* Google auth signin */}
-            {/* <form
-              action={async () => {
-                "use server";
-                await signIn("google");
-              }}
-            >
-              <Button type="submit">Join Now</Button>
-            </form> */}
             <Button type="button">
               <Link href="/products">Explore More</Link>
             </Button>
@@ -116,7 +107,7 @@ export default function Home() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           {/* <!-- Section Title --> */}
-          <h2 className="text-4xl font-bold text-center mb-6">Our Products</h2>
+          <h2 className="text-4xl font-bold text-center mb-6  text-gray-700 dark:text-white">Our Products</h2>
           <p className="text-center mb-12">
             Discover our range of high-quality imports
           </p>
@@ -158,7 +149,7 @@ export default function Home() {
       </section>
 
       <div className="">
-        <h2 className="font-bold text-3xl text-center py-12">Our Key Services</h2>
+        <h2 className="font-bold text-3xl text-center py-12  text-gray-700 dark:text-white">Our Key Services</h2>
         <ServiceCard />
       </div>
 

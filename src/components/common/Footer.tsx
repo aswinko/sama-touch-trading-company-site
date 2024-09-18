@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             {/* <h2 className="text-xl font-semibold mb-4">Sama Touch General Trading Company</h2> */}
             <img
-              src="/SAMA-FINAL-02.png" // Replace with your logo path
+              src="/SAMA-white.png" // Replace with your logo path
               alt="Company Logo"
               className="object-fill w-full h-24"
             />
