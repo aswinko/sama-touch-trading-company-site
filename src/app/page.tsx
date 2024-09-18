@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import ProductCards from "@/components/common/ProductCards";
+// import { Card, CardContent } from "@/components/ui/card";
+// import ProductCards from "@/components/common/ProductCards";
 import MovingCards from "@/components/common/MovingCards";
 import Footer from "@/components/common/Footer";
 import ServiceCard from "@/components/common/ServiceCard";
-import { signIn } from "@/auth";
+// import { signIn } from "@/auth";
 import Link from "next/link";
 import ProductsCategory from "@/components/common/ProductsCategory";
 
