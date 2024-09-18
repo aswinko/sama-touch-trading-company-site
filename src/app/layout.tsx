@@ -3,7 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Header from "@/components/common/Header";
 import { ThemeProvider } from "@/hooks/theme-provider";
-
+import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
   title: "Sama Touch",
@@ -29,6 +29,7 @@ export default function RootLayout({
             <Header />
 
             <div>{children}</div>
+            <Footer />
           </main>
         </ThemeProvider>
       </body>

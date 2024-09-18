@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 // import { Card, CardContent } from "@/components/ui/card";
 // import ProductCards from "@/components/common/ProductCards";
-import MovingCards from "@/components/common/MovingCards";
-import Footer from "@/components/common/Footer";
+// import MovingCards from "@/components/common/MovingCards";
 import ServiceCard from "@/components/common/ServiceCard";
 // import { signIn } from "@/auth";
 import Link from "next/link";
@@ -11,7 +10,7 @@ import ProductsCategory from "@/components/common/ProductsCategory";
 export default function Home() {
   return (
     <div className="mx-2 md:mx-4">
-      <div className="flex flex-col md:flex-row md:mt-8 py-4">
+      <div className="flex flex-col md:flex-row md:mt-8 py-4 ">
         <div className="w-full h-full flex justify-center">
           <img src="/banner.png" className="w-5/6" alt="img" />
         </div>
@@ -155,7 +154,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/products"
-              className="inline-block bg-primary text-sm text-white py-2 px-8 rounded-lg shadow-md hover:bg-primary transition duration-300"
+              className="inline-block bg-primary text-white py-2 px-8 rounded-lg shadow-md hover:bg-primary transition duration-300"
             >
               View All Products
             </Link>
@@ -168,16 +167,13 @@ export default function Home() {
         <ServiceCard />
       </div>
 
-      <div className="">
+      {/* <div className="">
         <h2 className="font-bold text-3xl text-center py-12">
           Customers Reviews
         </h2>
         <MovingCards />
-      </div>
+      </div> */}
 
-      <div className="">
-        <Footer />
-      </div>
     </div>
   );
 }

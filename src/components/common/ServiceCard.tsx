@@ -13,7 +13,7 @@ export default ServiceCard;
 
 export const projects = [
   {
-    title: "Sourcing",
+    title: "Global Sourcing",
     description:
       "Identifying and establishing relationships with reputable international suppliers who provide high-quality products.",
     // link: "https://stripe.com",
