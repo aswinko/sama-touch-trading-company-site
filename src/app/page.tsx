@@ -9,7 +9,7 @@ import ProductsCategory from "@/components/common/ProductsCategory";
 
 export default function Home() {
   return (
-    <div className="mx-2 md:mx-4">
+    <div className="container mx-auto">
       <div className="flex flex-col md:flex-row md:mt-8 py-4 ">
         <div className="w-full h-full flex justify-center">
           <img src="/banner.png" className="w-5/6" alt="img" />
@@ -26,7 +26,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <p className="text-sm md:text-lg text-gray-500 dark:text-gray-400">
+            <p className="text-sm md:text-lg text-gray-500 dark:text-gray-400 mx-1">
               We are a trusted importing company that connects international
               suppliers of high-quality food, spices, pulses, and dairy products
               with local markets, ensuring top-notch quality and compliance.
