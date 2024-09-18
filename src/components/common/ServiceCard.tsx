@@ -13,39 +13,39 @@ export default ServiceCard;
 
 export const projects = [
   {
-    title: "Stripe",
+    title: "Sourcing",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+      "Identifying and establishing relationships with reputable international suppliers who provide high-quality products.",
+    // link: "https://stripe.com",
   },
   {
-    title: "Netflix",
+    title: "Quality Assurance",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
+      "Ensuring imported goods meet local regulatory standards and quality expectations. This often involves inspecting products and verifying certifications.",
+    // link: "https://netflix.com",
   },
   {
-    title: "Google",
+    title: "Logistics and Customs:",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+      "Handling the complexities of international shipping, including customs documentation, tariffs, and transportation logistics.",
+    // link: "https://google.com",
   },
   {
-    title: "Meta",
+    title: "Market Analysis:",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
+      "Researching local market trends and consumer preferences to select the most suitable products for import",
+    // link: "https://meta.com",
   },
   {
-    title: "Amazon",
+    title: "Distribution",
     description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
+      "Coordinating with local distributors, wholesalers, and retailers to ensure smooth distribution and availability of products.",
+    // link: "https://amazon.com",
   },
   {
-    title: "Microsoft",
+    title: "Customer Relations",
     description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
+      "Providing support and information to local clients, managing orders, and addressing any issues that arise with the imported products.",
+    // link: "https://microsoft.com",
   },
 ];

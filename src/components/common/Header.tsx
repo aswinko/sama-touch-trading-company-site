@@ -5,10 +5,11 @@ import { ModeToggle } from "./ModeToggle";
 import { auth, signIn } from "@/auth";
 import ProfileDropDown from "./ProfileDropDown";
 import { SVGProps } from "react";
+import Image from "next/image";
 
 export default async function Component() {
   const session = await auth();
-  console.log(session);
+  // console.log(session);
 
   return (
     <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 justify-between ">
@@ -21,7 +22,8 @@ export default async function Component() {
         </SheetTrigger>
         <SheetContent side="left">
           <Link href="#" className="mr-6 hidden lg:flex" prefetch={false}>
-            <MountainIcon className="h-6 w-6" />
+            {/* <MountainIcon className="h-6 w-6" /> */}
+            <Image src={"/SAMA-FINAL-01.png"} className="w-6 h-6" alt="logo" />
             <span className="sr-only">Acme Inc</span>
           </Link>
           <div className="grid gap-2 py-6">
@@ -82,7 +84,9 @@ export default async function Component() {
         <ModeToggle />
       </div>
       <Link href="/" className="mr-6 hidden lg:flex" prefetch={false}>
-        <MountainIcon className="h-6 w-6" />
+        {/* <MountainIcon className="h-6 w-6" /> */}
+        <img src={"/SAMA-FINAL-01.png"} className="w-32 h-32" alt="logo" />
+
         <span className="sr-only">Acme Inc</span>
       </Link>
       <nav className="ml-auto hidden lg:flex gap-6">

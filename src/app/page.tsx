@@ -5,47 +5,52 @@ import MovingCards from "@/components/common/MovingCards";
 import Footer from "@/components/common/Footer";
 import ServiceCard from "@/components/common/ServiceCard";
 import { signIn } from "@/auth";
-import Image from "next/image";
+import Link from "next/link";
+import ProductsCategory from "@/components/common/ProductsCategory";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="mx-2 md:mx-4">
       <div className="flex flex-col md:flex-row md:mt-8 py-4">
         <div className="w-full h-full flex justify-center">
-          <Image src="/banner.png" className="w-5/6" alt="img" />
+          <img src="/banner.png" className="w-5/6" alt="img" />
         </div>
         <div className="flex flex-col justify-center text-center md:text-start items-center md:items-start gap-12">
-          <div>
+          {/* <div>
             <p className="text-sm md:text-lg font-semibold text-gray-600 dark:text-gray-300 ">
               Best import and export quality products
             </p>
-          </div>
+          </div> */}
           <div>
             <p className="text-3xl md:text-6xl font-bold">
-              Feel The Organic Movement!
+              Connecting Global Food to Local Markets
             </p>
           </div>
           <div>
             <p className="text-sm md:text-lg text-gray-500 dark:text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              We are a trusted importing company that connects international
+              suppliers of high-quality food, spices, pulses, and dairy products
+              with local markets, ensuring top-notch quality and compliance.
             </p>
           </div>
           <div className="flex items-end">
             {/* Google auth signin */}
-            <form
+            {/* <form
               action={async () => {
                 "use server";
                 await signIn("google");
               }}
             >
               <Button type="submit">Join Now</Button>
-            </form>
+            </form> */}
+            <Button type="button">
+              <Link href="/products">Explore More</Link>
+            </Button>
           </div>
         </div>
       </div>
       <div className="w-full bg-gray-100 dark:bg-gray-900 flex flex-col gap-4 md:gap-0 md:flex-row justify-evenly p-4">
-        <Card className="flex items-center rounded-none py-6">
+        <Card className="flex items-center rounded-none py-6 shadow-sm">
           <CardContent className="text-center">
             <p className="text-xl font-medium">Free Shipping</p>
             <span className="text-xs">Above $5 Only</span>
@@ -70,7 +75,11 @@ export default function Home() {
           </CardContent>
         </Card>
       </div>
-      <div className=" p-12">
+      <div className="">
+        <h2 className="font-bold text-3xl text-center py-12">Our Services</h2>
+        <ServiceCard />
+      </div>
+      {/* <div className=" p-12">
         <h2 className="font-bold text-3xl text-center py-12">
           Best Selling Products
         </h2>
@@ -111,12 +120,35 @@ export default function Home() {
             imgSrc="prd4.jpg"
           />
         </div>
-      </div>
+      </div> */}
 
-      <div className="">
-        <h2 className="font-bold text-3xl text-center py-12">Our Services</h2>
-        <ServiceCard />
-      </div>
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          {/* <!-- Section Title --> */}
+          <h2 className="text-4xl font-bold text-center mb-6">Our Products</h2>
+          <p className="text-center mb-12">
+            Discover our range of high-quality imports
+          </p>
+
+          {/* <!-- Product Grid --> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <ProductsCategory cardImg={"/prd1.jpg"} cardTitle={"Food Items"} cardDesc={"Processed foods and specialty items."} />
+            <ProductsCategory cardImg={"/prd2.jpg"} cardTitle={"Spices"} cardDesc={"Premium spices like saffron and paprika."} />
+            <ProductsCategory cardImg={"/prd3.jpg"} cardTitle={"Pulses"} cardDesc={"Lentils, beans, peas, and more."} />
+            <ProductsCategory cardImg={"/prd4.jpg"} cardTitle={"Dairy Products"} cardDesc={"Cheese, butter, yogurt, and more."} />
+          </div>
+
+          {/* <!-- CTA Button --> */}
+          <div className="text-center mt-12">
+            <Link
+              href="/products"
+              className="inline-block bg-primary py-2 px-8 rounded-lg shadow-md hover:bg-primary transition duration-300"
+            >
+              View All Products
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <div className="">
         <h2 className="font-bold text-3xl text-center py-12">
@@ -124,6 +156,7 @@ export default function Home() {
         </h2>
         <MovingCards />
       </div>
+
       <div className="">
         <Footer />
       </div>
