@@ -49,7 +49,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-gray-100 dark:bg-gray-900 flex flex-col gap-4 md:gap-0 md:flex-row justify-evenly p-4">
+      {/* <div className="w-full bg-gray-100 dark:bg-gray-900 flex flex-col gap-4 md:gap-0 md:flex-row justify-evenly p-4">
         <Card className="flex items-center rounded-none py-6 shadow-sm">
           <CardContent className="text-center">
             <p className="text-xl font-medium">Free Shipping</p>
@@ -74,11 +74,8 @@ export default function Home() {
             <span className="text-xs">No Questions Asked</span>
           </CardContent>
         </Card>
-      </div>
-      <div className="">
-        <h2 className="font-bold text-3xl text-center py-12">Our Services</h2>
-        <ServiceCard />
-      </div>
+      </div> */}
+
       {/* <div className=" p-12">
         <h2 className="font-bold text-3xl text-center py-12">
           Best Selling Products
@@ -132,10 +129,26 @@ export default function Home() {
 
           {/* <!-- Product Grid --> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <ProductsCategory cardImg={"/prd1.jpg"} cardTitle={"Food Items"} cardDesc={"Processed foods and specialty items."} />
-            <ProductsCategory cardImg={"/prd2.jpg"} cardTitle={"Spices"} cardDesc={"Premium spices like saffron and paprika."} />
-            <ProductsCategory cardImg={"/prd3.jpg"} cardTitle={"Pulses"} cardDesc={"Lentils, beans, peas, and more."} />
-            <ProductsCategory cardImg={"/prd4.jpg"} cardTitle={"Dairy Products"} cardDesc={"Cheese, butter, yogurt, and more."} />
+            <ProductsCategory
+              cardImg={"/prd1.jpg"}
+              cardTitle={"Food Items"}
+              cardDesc={"Processed foods and specialty items."}
+            />
+            <ProductsCategory
+              cardImg={"/prd2.jpg"}
+              cardTitle={"Spices"}
+              cardDesc={"Premium spices like saffron and paprika."}
+            />
+            <ProductsCategory
+              cardImg={"/prd3.jpg"}
+              cardTitle={"Pulses"}
+              cardDesc={"Lentils, beans, peas, and more."}
+            />
+            <ProductsCategory
+              cardImg={"/prd4.jpg"}
+              cardTitle={"Dairy Products"}
+              cardDesc={"Cheese, butter, yogurt, and more."}
+            />
           </div>
 
           {/* <!-- CTA Button --> */}
@@ -149,6 +162,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className="">
+        <h2 className="font-bold text-3xl text-center py-12">Our Key Services</h2>
+        <ServiceCard />
+      </div>
 
       <div className="">
         <h2 className="font-bold text-3xl text-center py-12">

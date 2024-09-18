@@ -1,6 +1,13 @@
 import React from "react";
 
-const ProductsCategory = ({ cardTitle, cardDesc, cardImg }:any) => {
+interface ProductCardsProps {
+  cardImg: string;
+  cardTitle: string;
+  cardDesc: string;
+}
+
+
+const ProductsCategory = ({ cardTitle, cardDesc, cardImg }:ProductCardsProps) => {
   return (
     <div className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
       <img
