@@ -155,7 +155,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/products"
-              className="inline-block bg-primary py-2 px-8 rounded-lg shadow-md hover:bg-primary transition duration-300"
+              className="inline-block bg-primary text-sm text-white py-2 px-8 rounded-lg shadow-md hover:bg-primary transition duration-300"
             >
               View All Products
             </Link>
