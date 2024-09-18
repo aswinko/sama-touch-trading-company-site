@@ -2,7 +2,7 @@ import React from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const page = () => {
   return (
@@ -13,8 +13,8 @@ const page = () => {
       <div className="flex flex-col lg:flex-row lg:space-x-10 mb-16">
         {/* Contact Information Section */}
         <div className="lg:w-1/2 space-y-6 mb-12 lg:mb-0">
-          <div className="border shadow-md rounded-lg p-8 flex items-start space-x-4">
-            <MapPin className="w-6 h-6 text-indigo-600" />
+          {/* <div className="border shadow-md rounded-lg p-8 flex items-start space-x-4">
+            <MapPin className="w-6 h-6 text-primary" />
             <div>
               <h2 className="text-xl font-semibold">Our Location</h2>
               <p>123 Import Lane, City, Country</p>
@@ -22,15 +22,15 @@ const page = () => {
           </div>
 
           <div className="border shadow-md rounded-lg p-8 flex items-start space-x-4">
-            <Phone className="w-6 h-6 text-indigo-600" />
+            <Phone className="w-6 h-6 text-primary" />
             <div>
               <h2 className="text-xl font-semibold">Phone</h2>
               <p>+123 456 789</p>
             </div>
-          </div>
+          </div> */}
 
           <div className="border shadow-md rounded-lg p-8 flex items-start space-x-4">
-            <Mail className="w-6 h-6 text-indigo-600" />
+            <Mail className="w-6 h-6 text-primary" />
             <div>
               <h2 className="text-xl font-semibold">Email</h2>
               <p>info@samatouch.com</p>
@@ -80,7 +80,7 @@ const page = () => {
               />
             </div>
 
-            <Button type="submit" className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700">
+            <Button type="submit" className="w-full mt-4 ">
               Send Message
             </Button>
           </form>
