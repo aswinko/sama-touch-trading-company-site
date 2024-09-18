@@ -13,7 +13,7 @@ const page = () => {
       <div className="flex flex-col lg:flex-row lg:space-x-10 mb-16">
         {/* Contact Information Section */}
         <div className="lg:w-1/2 space-y-6 mb-12 lg:mb-0">
-          <div className="bg-white shadow-md rounded-lg p-8 flex items-start space-x-4">
+          <div className="border shadow-md rounded-lg p-8 flex items-start space-x-4">
             <MapPin className="w-6 h-6 text-indigo-600" />
             <div>
               <h2 className="text-xl font-semibold">Our Location</h2>
@@ -21,7 +21,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="bg-white shadow-md rounded-lg p-8 flex items-start space-x-4">
+          <div className="border shadow-md rounded-lg p-8 flex items-start space-x-4">
             <Phone className="w-6 h-6 text-indigo-600" />
             <div>
               <h2 className="text-xl font-semibold">Phone</h2>
@@ -29,7 +29,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="bg-white shadow-md rounded-lg p-8 flex items-start space-x-4">
+          <div className="border shadow-md rounded-lg p-8 flex items-start space-x-4">
             <Mail className="w-6 h-6 text-indigo-600" />
             <div>
               <h2 className="text-xl font-semibold">Email</h2>
@@ -39,7 +39,7 @@ const page = () => {
         </div>
 
         {/* Contact Form Section */}
-        <div className="lg:w-1/2 bg-gray-50 shadow-lg rounded-lg p-10">
+        <div className="lg:w-1/2 border shadow-lg rounded-lg p-10">
           <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
           <form className="space-y-6">
             <div>

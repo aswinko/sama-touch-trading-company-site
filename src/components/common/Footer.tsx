@@ -1,89 +1,51 @@
-import Link from "next/link";
-import React, { SVGProps } from "react";
+import Link from 'next/link';
+import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="dark bg-gray-900 text-white py-8">
-      <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between">
-        <div className="flex items-center space-x-4">
-          <Link href="#" className="text-white hover:text-gray-300" prefetch={false}>
-            <YoutubeIcon className="h-6 w-6" />
-            <span className="sr-only">YouTube</span>
-          </Link>
-          <Link href="#" className="text-white hover:text-gray-300" prefetch={false}>
-            <GithubIcon className="h-6 w-6" />
-            <span className="sr-only">GitHub</span>
-          </Link>
-          <Link href="#" className="text-white hover:text-gray-300" prefetch={false}>
-            <TwitterIcon className="h-6 w-6" />
-            <span className="sr-only">Twitter</span>
-          </Link>
+    <footer className="bg-gray-800 text-white py-8">
+      <div className="container mx-auto px-4">
+        {/* Footer Top Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* About Us */}
+          <div>
+            <h2 className="text-xl font-semibold mb-4">Sama Touch General Trading Company</h2>
+            <p className="text-sm">
+              We are dedicated to connecting international suppliers with local markets, delivering high-quality food, spices, pulses, and dairy products. Our mission is to ensure excellence in every product we provide.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
+            <ul className="text-sm space-y-2">
+              <li><a href="/" className="hover:underline">Home</a></li>
+              <li><a href="/products" className="hover:underline">Products</a></li>
+              <li><a href="/about-us" className="hover:underline">About Us</a></li>
+              <li><a href="/contact-us" className="hover:underline">Contact Us</a></li>
+            </ul>
+          </div>
+
+          {/* Contact Information */}
+          <div>
+            <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
+            <ul className="text-sm space-y-2">
+              <li><span className="font-semibold">Address:</span> 1234 Market St, Suite 567, City, Country</li>
+              <li><span className="font-semibold">Phone:</span> (123) 456-7890</li>
+              <li><span className="font-semibold">Email:</span> info@samatouch.com</li>
+            </ul>
+          </div>
         </div>
-        <p className="mt-4 md:mt-0 text-sm text-gray-300">&copy; 2024 Designed by Aswin K O . All rights reserved.</p>
+
+        {/* Footer Bottom Section */}
+        <div className="border-t border-gray-700 pt-4">
+          <p className="text-center text-sm">
+            &copy; 2024 <Link className='text-primary' href="/">SAMA TOUCH GENERAL TRADING COMPANY</Link>. All rights reserved.
+          </p>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
 export default Footer;
-
-function GithubIcon(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-      <path d="M9 18c-4.51 2-5-2-7-2" />
-    </svg>
-  )
-}
-
-
-function TwitterIcon(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-    </svg>
-  )
-}
-
-
-function YoutubeIcon(props:SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
-      <path d="m10 15 5-3-5-3z" />
-    </svg>
-  )
-}

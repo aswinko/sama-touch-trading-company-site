@@ -15,11 +15,6 @@ export default function Home() {
           <img src="/banner.png" className="w-5/6" alt="img" />
         </div>
         <div className="flex flex-col justify-center text-center md:text-start items-center md:items-start gap-12">
-          {/* <div>
-            <p className="text-sm md:text-lg font-semibold text-gray-600 dark:text-gray-300 ">
-              Best import and export quality products
-            </p>
-          </div> */}
           <div>
             <p className="text-3xl md:text-6xl font-bold">
               Connecting Global Food to Local Markets

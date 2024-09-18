@@ -98,7 +98,7 @@ const Products = () => {
               <CardTitle>{product.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-gray-600 mb-4">{product.description}</p>
+              <p className="text-sm mb-4">{product.description}</p>
               <Button
                 className="w-full text-center"
               >

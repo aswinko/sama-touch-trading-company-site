@@ -31,7 +31,7 @@ export const projects = [
     // link: "https://google.com",
   },
   {
-    title: "Market Analysis:",
+    title: "Market Analysis",
     description:
       "Researching local market trends and consumer preferences to select the most suitable products for import",
     // link: "https://meta.com",
