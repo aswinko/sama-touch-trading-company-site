@@ -1,3 +1,4 @@
+import { LogoSmallAbout } from "@/components/common/LogoImg";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import React from "react";
 
@@ -44,11 +45,12 @@ const Page = () => {
     <section className="flex flex-col md:flex-row items-center max-w-3xl mx-auto mb-12">
       {/* Logo */}
       <div className="md:w-80 h-40 mb-4 md:mb-0 md:mr-6">
-        <img
+        {/* <img
           src="/SAMA-FINAL-01.png" // Replace with your logo path
           alt="Company Logo"
           className="object-cover w-full h-full"
-        />
+        /> */}
+        <LogoSmallAbout />
       </div>
 
       {/* Description */}

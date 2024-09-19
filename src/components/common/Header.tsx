@@ -15,13 +15,13 @@ export default async function Component() {
     <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 justify-between ">
       <Sheet>
         <SheetTrigger asChild className="flex">
-          <Button variant="outline" size="icon" className="lg:hidden">
+          <Button variant="outline" size="icon" className="lg:hidden z-1">
             <MenuIcon className="h-6 w-6" />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
         <SheetContent side="left">
-          <Link href="/" className="mr-6 lg:flex pt-0 relative -top-6" prefetch={false}>
+          <Link href="/" className="mr-6 lg:flex pt-0 relative -top-6 z-0" prefetch={false}>
             {/* <MountainIcon className="h-6 w-6" /> */}
             {/* <img src={"/SAMA-FINAL-01.png"} className="w-8 h-8" alt="logo" /> */}
             <LogoSmall />

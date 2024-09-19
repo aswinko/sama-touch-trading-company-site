@@ -56,3 +56,31 @@ export function LogoSmall() {
     />
   );
 }
+
+
+export function LogoSmallAbout() {
+  const { theme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // console.log("ff", theme);
+
+  // This is necessary to avoid hydration mismatch
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
+
+  // Check if the user prefers dark theme or light theme
+  const currentTheme = theme === "system" ? systemTheme : theme;
+
+  return (
+    <img
+      src={
+        currentTheme === "light"
+          ? "/SAMA-SMALL-dark.png" // Light mode logo
+          : "/SAMA-FINAL-01.png" // Dark mode logo
+      }
+      className="w-full h-full object-contain"
+      alt="logo"
+    />
+  );
+}

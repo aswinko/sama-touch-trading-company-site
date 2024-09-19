@@ -69,7 +69,7 @@ const allProducts: Product[] = [
     link: "#",
   },
   {
-    title: "Juices and Beverages",
+    title: "Beverages",
     description: "Refreshing juices and beverages made from natural ingredients.",
     image: "/products/juices.jpg",
     // category: "Beverages",
