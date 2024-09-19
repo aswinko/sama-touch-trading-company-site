@@ -120,23 +120,25 @@ export default function Home() {
           {/* <!-- Product Grid --> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ProductsCategory
-              cardImg={"/prd1.jpg"}
-              cardTitle={"Food Items"}
-              cardDesc={"Processed foods and specialty items."}
+              cardImg={"/products/dryfruits.jpg"}
+              cardTitle={"Dry Fruits and Nuts"}
+              cardDesc={
+                "A premium selection of nutritious dry fruits and nuts."
+              }
             />
             <ProductsCategory
-              cardImg={"/prd2.jpg"}
+              cardImg={"/products/spices.jpg"}
               cardTitle={"Spices"}
               cardDesc={"Premium spices like saffron and paprika."}
             />
             <ProductsCategory
-              cardImg={"/prd3.jpg"}
+              cardImg={"/products/pulses.jpg"}
               cardTitle={"Pulses"}
               cardDesc={"Lentils, beans, peas, and more."}
             />
             <ProductsCategory
-              cardImg={"/prd4.jpg"}
-              cardTitle={"Dairy Products"}
+              cardImg={"/products/milk.jpg"}
+              cardTitle={"Milk Products"}
               cardDesc={"Cheese, butter, yogurt, and more."}
             />
           </div>
