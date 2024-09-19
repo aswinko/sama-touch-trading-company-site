@@ -70,7 +70,7 @@ const Footer = () => {
 
         {/* Footer Bottom Section */}
         <div className="border-t border-gray-700 pt-4">
-          <p className="text-center text-sm">
+          <p className="text-center text-xs md:text-sm">
             &copy; 2024{" "}
             <Link className="text-primary" href="/">
               SAMA TOUCH GENERAL TRADING COMPANY

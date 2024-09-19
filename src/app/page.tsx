@@ -9,11 +9,11 @@ import ProductsCategory from "@/components/common/ProductsCategory";
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto md:py-12">
       <div className="flex flex-col md:flex-row md:mt-8 py-4 md:py-12">
         <div className="w-full h-full flex justify-center">
           <img
-            src="/home-page.png"
+            src="/banner.png"
             className="w-full h-full object-cover"
             alt="img"
           />

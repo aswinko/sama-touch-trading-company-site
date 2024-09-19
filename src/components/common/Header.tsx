@@ -5,7 +5,7 @@ import { ModeToggle } from "./ModeToggle";
 import { auth, signIn } from "@/auth";
 import ProfileDropDown from "./ProfileDropDown";
 import { SVGProps } from "react";
-import LogoImg from "./LogoImg";
+import { Logo, LogoSmall } from "./LogoImg";
 
 export default async function Component() {
   const session = await auth();
@@ -21,9 +21,10 @@ export default async function Component() {
           </Button>
         </SheetTrigger>
         <SheetContent side="left">
-          <Link href="/" className="mr-6 lg:flex" prefetch={false}>
+          <Link href="/" className="mr-6 lg:flex pt-0 relative -top-6" prefetch={false}>
             {/* <MountainIcon className="h-6 w-6" /> */}
-            <img src={"/SAMA-FINAL-01.png"} className="w-8 h-8" alt="logo" />
+            {/* <img src={"/SAMA-FINAL-01.png"} className="w-8 h-8" alt="logo" /> */}
+            <LogoSmall />
             <span className="sr-only">Sama Touch</span>
           </Link>
           <div className="grid gap-2 pb-6">
@@ -87,7 +88,7 @@ export default async function Component() {
         {/* <MountainIcon className="h-6 w-6" /> */}
         {/* <img src={"/SAMA-white.png"} className="hidden dark:flex object-contain w-80 h-56" alt="logo" />
         <img src={"/SAMA-Final-02.png"} className="dark:hidden flex object-contain w-80 h-56" alt="logo" /> */}
-        <LogoImg />
+        <Logo />
 
         <span className="sr-only">Sama Touch</span>
       </Link>

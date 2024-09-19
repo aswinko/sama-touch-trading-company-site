@@ -64,7 +64,7 @@ const allProducts: Product[] = [
   {
     title: "Instant Mixes",
     description: "Quick and easy instant mixes to prepare delicious meals in minutes.",
-    image: "/products/instant-mixes.jpg",
+    image: "/products/instantmix.jpg",
     // category: "Food Items",
     link: "#",
   },
