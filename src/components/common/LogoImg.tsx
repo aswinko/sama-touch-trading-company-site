@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
@@ -7,6 +7,9 @@ export default function Logo() {
   const { theme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+
+  // console.log("ff", theme);
+  
   // This is necessary to avoid hydration mismatch
   useEffect(() => setMounted(true), []);
 
@@ -20,7 +23,7 @@ export default function Logo() {
       src={
         currentTheme === 'dark'
           ? '/SAMA-white.png' // Dark mode logo
-          : '/SAMA-white.png' // Light mode logo
+          : '/SAMA-Final-02.png' // Light mode logo
       }
       alt="logo"
       className="object-contain w-80 h-56"
