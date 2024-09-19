@@ -21,7 +21,7 @@ export default function Logo() {
     <img
       src={
         currentTheme === "light"
-          ? "/SAMA-Final-02.png" // Light mode logo
+          ? "/SAMA-dark.png" // Light mode logo
           : "/SAMA-white.png" // Dark mode logo
       }
       alt="logo"
