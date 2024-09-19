@@ -12,7 +12,11 @@ export default function Home() {
     <div className="container mx-auto">
       <div className="flex flex-col md:flex-row md:mt-8 py-4 md:py-12">
         <div className="w-full h-full flex justify-center">
-          <img src="/home-page.png" className="w-full h-full object-cover" alt="img" />
+          <img
+            src="/home-page.png"
+            className="w-full h-full object-cover"
+            alt="img"
+          />
         </div>
         <div className="flex flex-col justify-center text-center md:text-start items-center md:items-start gap-12">
           <div>
@@ -22,9 +26,8 @@ export default function Home() {
           </div>
           <div>
             <p className="text-sm md:text-lg text-gray-500 dark:text-gray-400 mx-1">
-              We are a trusted importing company that connects international
-              suppliers of high-quality food, spices, pulses, and dairy products
-              with local markets, ensuring top-notch quality and compliance.
+              We are a trusted company in kuwait dedicated to import the best
+              food products from around the world to the local markets.
             </p>
           </div>
           <div className="flex items-end">
@@ -107,7 +110,9 @@ export default function Home() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           {/* <!-- Section Title --> */}
-          <h2 className="text-4xl font-bold text-center mb-6  text-gray-700 dark:text-white">Our Products</h2>
+          <h2 className="text-4xl font-bold text-center mb-6  text-gray-700 dark:text-white">
+            Our Products
+          </h2>
           <p className="text-center mb-12">
             Discover our range of high-quality imports
           </p>
@@ -149,7 +154,9 @@ export default function Home() {
       </section>
 
       <div className="">
-        <h2 className="font-bold text-3xl text-center py-12  text-gray-700 dark:text-white">Our Key Services</h2>
+        <h2 className="font-bold text-3xl text-center py-12  text-gray-700 dark:text-white">
+          Our Key Services
+        </h2>
         <ServiceCard />
       </div>
 
@@ -159,7 +166,6 @@ export default function Home() {
         </h2>
         <MovingCards />
       </div> */}
-
     </div>
   );
 }

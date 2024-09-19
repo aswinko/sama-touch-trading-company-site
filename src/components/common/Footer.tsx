@@ -54,13 +54,13 @@ const Footer = () => {
           <div>
             <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
             <ul className="text-sm space-y-2">
-              <li>
+              {/* <li>
                 <span className="font-semibold">Address:</span> 1234 Market St,
                 Suite 567, City, Country
               </li>
               <li>
                 <span className="font-semibold">Phone:</span> (123) 456-7890
-              </li>
+              </li> */}
               <li>
                 <span className="font-semibold">Email:</span> info@samatouch.com
               </li>

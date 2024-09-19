@@ -5,6 +5,7 @@ import { ModeToggle } from "./ModeToggle";
 import { auth, signIn } from "@/auth";
 import ProfileDropDown from "./ProfileDropDown";
 import { SVGProps } from "react";
+import LogoImg from "./LogoImg";
 
 export default async function Component() {
   const session = await auth();
@@ -84,8 +85,9 @@ export default async function Component() {
       </div>
       <Link href="/" className="mr-6 hidden lg:flex" prefetch={false}>
         {/* <MountainIcon className="h-6 w-6" /> */}
-        <img src={"/SAMA-white.png"} className="hidden dark:flex object-contain w-80 h-56" alt="logo" />
-        <img src={"/SAMA-Final-02.png"} className="dark:hidden flex object-contain w-80 h-56" alt="logo" />
+        {/* <img src={"/SAMA-white.png"} className="hidden dark:flex object-contain w-80 h-56" alt="logo" />
+        <img src={"/SAMA-Final-02.png"} className="dark:hidden flex object-contain w-80 h-56" alt="logo" /> */}
+        <LogoImg />
 
         <span className="sr-only">Sama Touch</span>
       </Link>
