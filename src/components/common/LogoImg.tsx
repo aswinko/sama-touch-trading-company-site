@@ -20,7 +20,7 @@ export default function Logo() {
       src={
         currentTheme === 'dark'
           ? '/SAMA-white.png' // Dark mode logo
-          : '/SAMA-Final-02.png' // Light mode logo
+          : '/SAMA-white.png' // Light mode logo
       }
       alt="logo"
       className="object-contain w-80 h-56"
