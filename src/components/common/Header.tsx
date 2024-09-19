@@ -2,13 +2,13 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
-import { auth, signIn } from "@/auth";
-import ProfileDropDown from "./ProfileDropDown";
+// import { auth } from "@/auth";
+// import ProfileDropDown from "./ProfileDropDown";
 import { SVGProps } from "react";
 import { Logo, LogoSmall } from "./LogoImg";
 
 export default async function Component() {
-  const session = await auth();
+  // const session = await auth();
   // console.log(session);
 
   return (
@@ -56,7 +56,7 @@ export default async function Component() {
             >
               Contact Us
             </Link>
-            {!session?.user ? (
+            {/* {!session?.user ? (
               // <Link
               //   className="flex w-full items-center py-2 text-lg font-semibold dark:text-primary dark:hover:text-primary"
               //   prefetch={false}
@@ -77,7 +77,7 @@ export default async function Component() {
             ) : (
               // </Link>
               <ProfileDropDown />
-            )}
+            )} */}
           </div>
         </SheetContent>
       </Sheet>
@@ -122,7 +122,7 @@ export default async function Component() {
           Contact Us
         </Link>
 
-        {!session?.user ? (
+        {/* {!session?.user ? (
           <form
             action={async () => {
               "use server";
@@ -146,7 +146,7 @@ export default async function Component() {
           // >
           //   <button type="submit">Log Out</button>
           // </form>
-        )}
+        )} */}
         <ModeToggle />
       </nav>
     </header>
