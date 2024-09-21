@@ -61,13 +61,13 @@ const allProducts: Product[] = [
     // category: "Food Items",
     link: "#",
   },
-  {
-    title: "Instant Mixes",
-    description: "Quick and easy instant mixes to prepare delicious meals in minutes.",
-    image: "/products/instantmix.jpg",
-    // category: "Food Items",
-    link: "#",
-  },
+  // {
+  //   title: "Instant Mixes",
+  //   description: "Quick and easy instant mixes to prepare delicious meals in minutes.",
+  //   image: "/products/instantmix.jpg",
+  //   // category: "Food Items",
+  //   link: "#",
+  // },
   {
     title: "Beverages",
     description: "Refreshing juices and beverages made from natural ingredients.",

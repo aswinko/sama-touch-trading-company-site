@@ -2,26 +2,28 @@ import React from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 const page = () => {
   return (
     <div className="container mx-auto px-4 py-10">
       {/* Section Title */}
-      <h1 className="text-4xl font-bold text-center mb-12 text-gray-700 dark:text-white">Contact Us</h1>
+      <h1 className="text-4xl font-bold text-center mb-12 text-gray-700 dark:text-white">
+        Contact Us
+      </h1>
 
       <div className="flex flex-col lg:flex-row lg:space-x-10 mb-16">
         {/* Contact Information Section */}
         <div className="lg:w-1/2 space-y-6 mb-12 lg:mb-0">
-          {/* <div className="border shadow-md rounded-lg p-8 flex items-start space-x-4">
+          <div className="border shadow-md rounded-lg p-8 flex items-start space-x-4">
             <MapPin className="w-6 h-6 text-primary" />
             <div>
               <h2 className="text-xl font-semibold">Our Location</h2>
-              <p>123 Import Lane, City, Country</p>
+              <p>Kuwait -Khaitan Block-7 Building -20</p>
             </div>
           </div>
 
-          <div className="border shadow-md rounded-lg p-8 flex items-start space-x-4">
+          {/* <div className="border shadow-md rounded-lg p-8 flex items-start space-x-4">
             <Phone className="w-6 h-6 text-primary" />
             <div>
               <h2 className="text-xl font-semibold">Phone</h2>
@@ -92,7 +94,7 @@ const page = () => {
         <iframe
           title="Company Location"
           className="w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.6114082950617!2d-122.40405768468206!3d37.782112479757566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c4d2121fb%3A0xb3eb1133f1078f68!2s123%20Import%20Ln%2C%20San%20Francisco%2C%20CA%2094158%2C%20USA!5e0!3m2!1sen!2s!4v1632879485670!5m2!1sen!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27839.274766911167!2d47.95503414278273!3d29.2849903201143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf9bc770801153%3A0xb6ec5934c8cb3494!2sKhaitan%2C%20Kuwait!5e0!3m2!1sen!2sin!4v1726896724913!5m2!1sen!2sin"
           // allowFullScreen="true"
           loading="lazy"
         ></iframe>
